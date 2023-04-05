@@ -20,28 +20,35 @@ const useStyles = makeStyles(() => ({
     paddingBottom: "1em",
   },
   menuButton: {
-    paddingTop: "40px",
+    // paddingTop: "70px",
     marginRight: "16px",
+    fontFamily: "Roboto, sans-serif",
+    "&:hover": {
+      textDecoration: "underline",
+      color: "white",
+    },
   },
   img: {
-    marginTop: "4px",
+    marginTop: "80px",
     paddingTop: "4px",
     height: "3em",
     width: "14em",
   },
   button: {
     border: "0px",
-    color: "black",
+    color: "white",
     fontWeight: "inherit",
+    marginTop: "10px",
     textDecoration: "none",
   },
+
   title: {
     color: "black",
     flexGrow: 1,
   },
   navbarGrid: {
-    marginTop: "4px",
-    paddingTop: "4px",
+    // marginTop: "4px",
+    // paddingTop: "4px",
     // alignSelf: 'center',
     // justifyContent: 'space-between',
   },
@@ -67,11 +74,15 @@ export default function Navbar() {
         <Toolbar>
           <Grid container row justifyContent="space-between">
             <Grid item xs>
-                <Link to="/events" className={classes.menuButton}>
-              <Typography variant="h1" class="button" >
+              <Link to="/events" className={classes.menuButton}>
+                <Typography
+                  variant="h1"
+                  class="main__title"
+                  style={{ marginTop: "10px" }}
+                >
                   EventHub
-              </Typography>
-                </Link>
+                </Typography>
+              </Link>
             </Grid>
             <Grid item xs />
             <Grid item xs>

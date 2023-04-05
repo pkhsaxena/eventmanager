@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import {
   makeStyles,
   Grid,
@@ -9,36 +9,46 @@ import {
   Typography,
   IconButton,
   CardActions,
-} from '@material-ui/core';
-import clsx from 'clsx';
-import AddIcon from '@material-ui/icons/Add';
-import useIsMobile from '../../../hooks/useIsMobile';
-import { truncateString } from '../../../utils/utilityFunctions';
+} from "@material-ui/core";
+import clsx from "clsx";
+import AddIcon from "@material-ui/icons/Add";
+import useIsMobile from "../../../hooks/useIsMobile";
+import { truncateString } from "../../../utils/utilityFunctions";
 const useStyles = makeStyles((theme) => ({
   root: {
     maxWidth: 345,
   },
   appBar: {
-    position: 'relative',
+    position: "relative",
   },
-  cover: { height: '460px', overflow: 'hidden' },
+  cover: { height: "460px", overflow: "hidden" },
   media: {
     height: 0,
-    paddingTop: '56.25%', // 16:9
+    paddingTop: "56.25%", // 16:9
+  },
+  addIcon: {
+    "&:hover": {
+      color: " #fac79b",
+    },
   },
   expand: {
-    boxShadow: 'none',
-    borderRadius: 'inherit',
-    width: '100%',
-    transform: 'rotate(0deg)',
-    border: '0px',
-    marginLeft: 'auto',
-    transition: theme.transitions.create('transform', {
+    boxShadow: "none",
+    borderRadius: "inherit",
+    width: "100%",
+    transform: "rotate(0deg)",
+    border: "0px",
+
+    marginLeft: "auto",
+    transition: theme.transitions.create("transform", {
       duration: theme.transitions.duration.shortest,
     }),
+    "&:hover": {
+      color: " #E0812E",
+    },
+    
   },
   expandOpen: {
-    transform: 'rotate(180deg)',
+    transform: "rotate(180deg)",
   },
 }));
 const EventCard = ({ name, type, poster, eventObject, dialogCallback }) => {
@@ -54,10 +64,10 @@ const EventCard = ({ name, type, poster, eventObject, dialogCallback }) => {
       <Card className={classes.root}>
         <div className={classes.details}>
           <CardContent className={classes.content}>
-            <Typography component='h5' variant='h5'>
+            <Typography component="h5" variant="h5">
               {truncateString(name, 25)}
             </Typography>
-            <Typography variant='subtitle1' color='textSecondary'>
+            <Typography variant="subtitle1" color="textSecondary">
               {type}
             </Typography>
           </CardContent>
@@ -65,19 +75,19 @@ const EventCard = ({ name, type, poster, eventObject, dialogCallback }) => {
         {!isMobile && (
           <Box boxShadow={4}>
             <CardMedia
-              component='img'
+              component="img"
               className={classes.cover}
               src={
                 poster
                   ? poster
-                  : 'https://res.cloudinary.com/dashed/image/upload/v1611051427/acm/klgjkuqdehb2g4buvprx.png'
+                  : "https://res.cloudinary.com/dashed/image/upload/v1611051427/acm/klgjkuqdehb2g4buvprx.png"
               }
-              title='Naya event brrrr'
+              title="Naya event brrrr"
             />
           </Box>
         )}
         <CardActions disableSpacing>
-          <Grid container justify='center' alignItems='center'>
+          <Grid container justify="center" alignItems="center">
             <Grid item xs>
               <IconButton
                 className={clsx(classes.expand, {
@@ -87,9 +97,9 @@ const EventCard = ({ name, type, poster, eventObject, dialogCallback }) => {
                   dialogCallback(eventObject);
                 }}
                 aria-expanded={expanded}
-                aria-label='show more'
+                aria-label="show more"
               >
-                <AddIcon />
+                <AddIcon className={classes.addIcon} />
               </IconButton>
             </Grid>
           </Grid>

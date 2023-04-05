@@ -13,8 +13,8 @@ import Map from "./EventMap";
 const useStyles = makeStyles(() => ({
   mainGrid: {
     paddingTop: "8px",
-    background: "#111827",
-    color: "white",
+    background: "#F1F1F1",
+    color: "Black",
     height: "100vh",
   },
 }));
@@ -34,7 +34,7 @@ export default function EventRegistration({ content }) {
           style={{ paddingBottom: "16px" }}
         >
           <Grid item>
-            <Typography variant="h2">{content.title}</Typography>
+            <Typography variant="h3">{content.title}</Typography>
           </Grid>
         </Grid>
         <Grid container spacing={2} direction="row" justify="space-evenly">
@@ -42,12 +42,14 @@ export default function EventRegistration({ content }) {
             <Grid container direction="column">
               <Card
                 variant="primary"
+                rasied="true"
                 style={{
                   padding: 2,
                   display: "flex",
                   flexDirection: "column",
                   background: "white",
-
+                  border: "3px solid #E0812E",
+                  boxShadow: "0 4px 6px rgba(0,0,0, 0.1)",
                   height: "75vh",
                 }}
               >
@@ -98,7 +100,12 @@ export default function EventRegistration({ content }) {
                     justify="center"
                     style={{ paddingTop: "32px" }}
                   >
-                    <Button variant="contained" color="primary" size="medium" style={{width:"150px"}}>
+                    <Button
+                      variant="contained"
+                      color="primary"
+                      size="medium"
+                      style={{ width: "150px" }}
+                    >
                       <a
                         href="https://forms.gle/bz14iHDQBRZfnzNg7"
                         target="_blank"
@@ -114,7 +121,14 @@ export default function EventRegistration({ content }) {
           </Grid>
           <Grid item xs>
             <Grid container direction="column">
-              <Card style={{ height: "75vh" }}>
+              <Card
+                style={{
+                  height: "75vh",
+                  background: "white",
+                  border: "3px solid #E0812E",
+                  boxShadow: "0 4px 6px rgba(0,0,0, 0.1)",
+                }}
+              >
                 <Grid item>
                   <Map />
                   <Typography variant="h4">Location</Typography>
