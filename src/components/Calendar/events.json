@@ -1,0 +1,235 @@
+
+[
+    {
+        "id": 1,
+        "when": "2023-03-15T18:00:00",
+        "where": "Central Park, New York City",
+        "what": "Shakespeare in the Park: Hamlet",
+        "tags": ["theater", "outdoor"],
+        "rating": 4.5,
+        "interestedCount": 150,
+        "amenities": ["outdoor seating", "picnic area"],
+        "duration": 2
+      },
+      {
+        "id": 2,
+        "when": "2023-03-22T20:00:00",
+        "where": "Barclays Center, Brooklyn",
+        "what": "Jay-Z Concert",
+        "tags": ["music", "concert"],
+        "rating": 4.8,
+        "interestedCount": 500,
+        "amenities": ["seating", "live performance"],
+        "duration": 3
+      },
+      {
+        "id": 3,
+        "when": "2023-03-29T10:00:00",
+        "where": "Central Park Zoo, New York City",
+        "what": "Penguin Feeding",
+        "tags": ["animals", "family"],
+        "rating": 4.2,
+        "interestedCount": 80,
+        "amenities": ["zoo exhibits", "animal feeding"],
+        "duration": 1
+      },
+      {
+        "id": 4,
+        "when": "2023-03-06T13:00:00",
+        "where": "Madison Square Garden, New York City",
+        "what": "New York Knicks vs. Brooklyn Nets",
+        "tags": ["sports", "basketball"],
+        "rating": 4.7,
+        "interestedCount": 300,
+        "amenities": ["stadium seating", "concession stands"],
+        "duration": 2
+      },
+      {
+        "id": 5,
+        "when": "2023-03-13T09:00:00",
+        "where": "Central Park, New York City",
+        "what": "Birdwatching Tour",
+        "tags": ["nature", "outdoor"],
+        "rating": 4.4,
+        "interestedCount": 60,
+        "amenities": ["binoculars", "guided tour"],
+        "duration": 2
+      },
+      {
+        "id": 6,
+        "when": "2023-03-20T15:00:00",
+        "where": "Brooklyn Academy of Music, Brooklyn",
+        "what": "Dance Performance",
+        "tags": ["dance", "performance"],
+        "rating": 4.6,
+        "interestedCount": 100,
+        "amenities": ["seating", "live performance"],
+        "duration": 2.5
+      },
+      {
+        "id": 7,
+        "when": "2023-03-27T11:00:00",
+        "where": "The Metropolitan Museum of Art, New York City",
+        "what": "Guided Tour of the Met",
+        "tags": ["art", "museum"],
+        "rating": 4.3,
+        "interestedCount": 70,
+        "amenities": ["guided tour", "art exhibits"],
+        "duration": 2
+      },
+      {
+        "id": 8,
+        "when": "2023-03-03T19:00:00",
+        "where": "Radio City Music Hall, New York City",
+        "what": "Rockettes Summer Spectacular",
+        "tags": ["dance", "performance", "summer"],
+        "rating": 4.9,
+        "interestedCount": 250,
+        "amenities": ["seating", "live performance"],
+        "duration": 2.5
+      },
+      {
+        "id": 9,
+        "when": "2023-03-10T14:00:00",
+        "where": "Yankee Stadium, Bronx",
+        "what": "New York Yankees vs. Boston Red Sox",
+        "tags": ["sports", "baseball"],
+        "rating": 4.8,
+        "interestedCount": 400,
+        "amenities": ["stadium seating", "concession stands"],
+        "duration": 3
+      },
+      {
+        "id": 10,
+        "when": "2023-03-17T12:00:00",
+        "where": "Bronx Zoo, Bronx",
+        "what": "Giraffe Feeding",
+        "tags": ["animals", "family"],
+        "rating": 4.1,
+        "interestedCount": 60,
+        "amenities": ["zoo exhibits", "animal feeding"],
+        "duration": 1
+      },
+      {
+        "id": 11,
+        "when": "2023-03-24T20:00:00",
+        "where": "Carnegie Hall, New York City",
+        "what": "Classical Music Concert",
+        "tags": ["music", "concert", "classical"],
+        "rating": 4.7,
+        "interestedCount": 150,
+        "amenities": ["seating", "live performance"],
+        "duration": 2.5
+      },
+      {
+        "id": 12,
+        "when": "2023-03-01T11:00:00",
+        "where": "American Museum of Natural History, New York City",
+        "what": "Dinosaur Tour",
+        "tags": ["science", "museum", "family"],
+        "rating": 4.4,
+        "interestedCount": 80,
+        "amenities": ["guided tour", "dinosaur exhibits"],
+        "duration": 2
+      },
+      {
+        "id": 13,
+        "when": "2023-03-08T16:00:00",
+        "where": "Prospect Park, Brooklyn",
+        "what": "Outdoor Yoga",
+        "tags": ["fitness", "outdoor", "yoga"],
+        "rating": 4.5,
+        "interestedCount": 100,
+        "amenities": ["yoga mats", "outdoor space"],
+        "duration": 1.5
+      },
+      {
+        "id": 14,
+        "when": "2023-03-15T18:00:00",
+        "where": "Jones Beach Theater, Wantagh",
+        "what": "Rock Concert: Guns N' Roses",
+        "tags": ["music", "concert", "rock"],
+        "rating": 4.6,
+        "interestedCount": 350,
+        "amenities": ["seating", "live performance"],
+        "duration": 3
+      },
+       {
+        "id": 15,
+        "when": "2023-03-22T14:00:00",
+        "where": "MetLife Stadium, East Rutherford",
+        "what": "New York Giants vs. Dallas Cowboys",
+        "tags": ["sports", "football"],
+        "rating": 4.8,
+        "interestedCount": 500,
+        "amenities": ["stadium seating", "concession stands"],
+        "duration": 3
+      },
+      {
+        "id": 16,
+        "when": "2023-03-29T10:00:00",
+        "where": "Central Park, New York City",
+        "what": "Guided Birdwatching Tour",
+        "tags": ["nature", "outdoor"],
+        "rating": 4.3,
+        "interestedCount": 40,
+        "amenities": ["guided tour", "birdwatching"],
+        "duration": 2
+      },
+      {
+        "id": 17,
+        "when": "2023-03-05T19:00:00",
+        "where": "Barclays Center, Brooklyn",
+        "what": "Hip Hop Concert: Kendrick Lamar",
+        "tags": ["music", "concert", "hip hop"],
+        "rating": 4.7,
+        "interestedCount": 300,
+        "amenities": ["seating", "live performance"],
+        "duration": 2.5
+      },
+      {
+        "id": 18,
+        "when": "2023-03-12T13:00:00",
+        "where": "Citi Field, Queens",
+        "what": "New York Mets vs. Washington Nationals",
+        "tags": ["sports", "baseball"],
+        "rating": 4.6,
+        "interestedCount": 350,
+        "amenities": ["stadium seating", "concession stands"],
+        "duration": 3
+      },
+      {
+        "id": 19,
+        "when": "2023-03-19T17:00:00",
+        "where": "Governors Island, New York City",
+        "what": "Jazz Festival",
+        "tags": ["music", "festival", "jazz"],
+        "rating": 4.5,
+        "interestedCount": 200,
+        "amenities": ["outdoor space", "live music"],
+        "duration": 4
+      },
+      {
+        "id": 20,
+        "when": "2023-03-26T20:00:00",
+        "where": "Beacon Theatre, New York City",
+        "what": "Comedy Show: Trevor Noah",
+        "tags": ["comedy", "stand-up"],
+        "rating": 4.4,
+        "interestedCount": 120,
+        "amenities": ["seating", "live performance"],
+        "duration": 2
+      },
+      {
+        "id": 21,
+        "when": "2023-03-02T11:00:00",
+        "where": "Bronx Zoo, Bronx",
+        "what": "African Plains Tour",
+        "tags": ["animals", "family"],
+        "rating": 4.2,
+        "interestedCount": 70,
+        "amenities": ["guided tour", "animal exhibits"],
+        "duration": 2.5
+      }
+]
+  

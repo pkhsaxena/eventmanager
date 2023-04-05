@@ -1,0 +1,33 @@
+@import './dayz';
+
+.dayz-test-wrapper {
+	box-sizing: border-box;
+	height: 100%;
+	padding: 1rem;
+	display: flex;
+	flex-direction: column;
+	min-height: 600px;
+	flex-wrap: nowrap;
+}
+
+.dayz-test-wrapper .dayz {
+	flex: 1;
+}
+
+.dayz-test-wrapper .tools {
+	flex-basis: 50px;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+
+.dayz-test-wrapper .event .edit {
+	position: absolute;
+	width: calc(100% - 20px);
+	left: 5px;
+	top: 0px;
+}
+
+.dayz-test-wrapper .event.span-1 input.edit {
+	top: 5px;
+}

@@ -10,7 +10,7 @@ import UserProvider from '../components/providers/UserProvider';
 import UpcomingEvents from '../components/Events/UpcomingEvents';
 import Profile from '../components/Profile/profile';
 import CreateEventForm from '../components/CreateEventForm/EventForm';
-import YourEvents from '../components/YourEvents/YourEvents';
+import EventCalendar from "../components/Calendar/calendar";
 import Faculty from '../components/Faculty/Faculty';
 import Admin from '../components/Admin/Admin';
 import { firebase } from './../firebase';
@@ -21,6 +21,7 @@ import Selectevent from '../Selectors/events';
 import { useDispatch } from 'react-redux';
 import { addEventToStore } from '../actions/events';
 import { db } from '../firebase';
+import ChatBot from '../components/Chatbot/test';
 export const history = createHistory();
 const AppRouter = () => {
   const dispatch = useDispatch();
@@ -54,10 +55,11 @@ const AppRouter = () => {
           <Switch>
             <Route path='/' component={Landing} exact={true} />
             <PrivateRoute path='/home' component={Dashboard} />
+            <PrivateRoute path='/test' component={ChatBot} />
             <PrivateRoute path='/events' component={Events} />
             <PrivateRoute path='/upcoming' component={UpcomingEvents} />
             <PrivateRoute path='/createevent' component={CreateEventForm} />
-            <PrivateRoute path='/yourEvent' component={YourEvents} />
+            <PrivateRoute path='/yourEvent' component={EventCalendar} />
             <PrivateRoute path='/profile' component={Profile} />
             <FacultyRoute path='/organizer' component={Faculty} />
             <AdminRoute path='/admin' component={Admin} />

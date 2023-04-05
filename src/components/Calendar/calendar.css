@@ -1,0 +1,55 @@
+.calendar {
+  width: 50vw;
+  height: 50vh;
+  margin: auto;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 768px) {
+  .calendar {
+    width: 100vw;
+    height: 100vh;
+  }
+}
+
+.weekdays {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid black;
+}
+
+.weekdays div {
+  flex: 1;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.days {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.day {
+  flex: 1;
+  height: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.today {
+  background-color: #f2f2f2;
+}
+
+.event {
+  background-color: yellow;
+  font-size: 14px;
+  padding: 2px 5px;
+  border-radius: 5px;
+}
