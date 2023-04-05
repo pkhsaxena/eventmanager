@@ -1,3 +1,9 @@
 .navbar {
-  background: linear-gradient(105deg, #ffffff 10%, #ffcc00 90%);
+  /* background: rgba(0, 0, 0, 0.5); */
+  background: 285797;
+}
+
+content h1 {
+  font-size: 50px;
+  text-align: center;
 }

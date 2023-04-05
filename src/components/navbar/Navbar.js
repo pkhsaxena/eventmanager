@@ -1,46 +1,47 @@
-import React, { useContext } from 'react';
+import React, { useContext } from "react";
 import {
   makeStyles,
+  Typography,
   Button,
   Grid,
   AppBar,
   Toolbar,
   CircularProgress,
   Avatar,
-} from '@material-ui/core';
-import logo from './mujlogo.png';
-import './navbar.css';
-import { UserContext } from '../providers/UserProvider';
-import { Link, useHistory } from 'react-router-dom';
-import { auth } from '../../firebase';
+} from "@material-ui/core";
+import logo from "./mujlogo.png";
+import "./navbar.css";
+import { UserContext } from "../providers/UserProvider";
+import { Link, useHistory } from "react-router-dom";
+import { auth } from "../../firebase";
 const useStyles = makeStyles(() => ({
   root: {
     flexGrow: 1,
-    paddingBottom: '1em',
+    paddingBottom: "1em",
   },
   menuButton: {
-    paddingTop: '4px',
-    marginRight: '16px',
+    paddingTop: "40px",
+    marginRight: "16px",
   },
   img: {
-    marginTop: '4px',
-    paddingTop: '4px',
-    height: '3em',
-    width: '14em',
+    marginTop: "4px",
+    paddingTop: "4px",
+    height: "3em",
+    width: "14em",
   },
   button: {
-    border: '0px',
-    color: 'black',
-    fontWeight: 'inherit',
-    textDecoration: 'none',
+    border: "0px",
+    color: "black",
+    fontWeight: "inherit",
+    textDecoration: "none",
   },
   title: {
-    color: 'black',
+    color: "black",
     flexGrow: 1,
   },
   navbarGrid: {
-    marginTop: '4px',
-    paddingTop: '4px',
+    marginTop: "4px",
+    paddingTop: "4px",
     // alignSelf: 'center',
     // justifyContent: 'space-between',
   },
@@ -54,7 +55,7 @@ export default function Navbar() {
     auth
       .signOut()
       .then(() => {
-        history.push('/');
+        history.push("/");
       })
       .catch((error) => {
         console.log(error.message);
@@ -62,24 +63,22 @@ export default function Navbar() {
   };
   return (
     <div className={classes.root}>
-      <AppBar position='static' className='navbar'>
+      <AppBar position="static" className="navbar">
         <Toolbar>
-          <Grid container row justifyContent='space-between'>
+          <Grid container row justifyContent="space-between">
             <Grid item xs>
-              <Link
-                to='/events'
-                className={classes.menuButton}
-                style={{ textDecoration: 'none' }}
-              >
-                <img src={logo} className={classes.img} alt='logo' />
-              </Link>
+                <Link to="/events" className={classes.menuButton}>
+              <Typography variant="h1" class="button" >
+                  EventHub
+              </Typography>
+                </Link>
             </Grid>
             <Grid item xs />
             <Grid item xs>
-              <Grid container direction='column'>
+              <Grid container direction="column">
                 <Grid item xs={2} />
                 <Grid item xs className={classes.navbarGrid}>
-                  <Grid container justifyContent='center' alignItems='center'>
+                  <Grid container justifyContent="center" alignItems="center">
                     {!user && (
                       <Grid item xs>
                         <CircularProgress className={classes.button} />
@@ -87,15 +86,15 @@ export default function Navbar() {
                     )}
                     {user &&
                     user.email ===
-                      ('karan1501mannan@gmail.com' ||
-                        'raghuweer23@gmail.com') ? (
+                      ("karan1501mannan@gmail.com" ||
+                        "raghuweer23@gmail.com") ? (
                       <>
                         <Grid item xs>
-                          <Link to='/organizer'>
+                          <Link to="/organizer">
                             <Button
-                              color='inherit'
+                              color="inherit"
                               className={classes.button}
-                              style={{ boxShadow: '0px' }}
+                              style={{ boxShadow: "0px" }}
                               disableElevation
                             >
                               📇 faculty tab
@@ -103,11 +102,11 @@ export default function Navbar() {
                           </Link>
                         </Grid>
                         <Grid item xs>
-                          <Link to='/admin'>
+                          <Link to="/admin">
                             <Button
-                              color='inherit'
+                              color="inherit"
                               className={classes.button}
-                              style={{ boxShadow: '0px' }}
+                              style={{ boxShadow: "0px" }}
                               disableElevation
                             >
                               📇 DSW tab
@@ -118,11 +117,11 @@ export default function Navbar() {
                     ) : (
                       <>
                         <Grid item xs>
-                          <Link to='/createevent'>
+                          <Link to="/createevent">
                             <Button
-                              color='inherit'
+                              color="inherit"
                               className={classes.button}
-                              style={{ boxShadow: '0px' }}
+                              style={{ boxShadow: "0px" }}
                               disableElevation
                             >
                               ➕create event
@@ -130,10 +129,10 @@ export default function Navbar() {
                           </Link>
                         </Grid>
                         <Grid item xs>
-                          <Link to='/yourEvent'>
-                            {' '}
+                          <Link to="/yourEvent">
+                            {" "}
                             <Button
-                              color='inherit'
+                              color="inherit"
                               className={classes.button}
                               disableElevation
                             >
@@ -146,16 +145,16 @@ export default function Navbar() {
                     <Grid item xs>
                       <Button
                         disableElevation
-                        color='inherit'
+                        color="inherit"
                         className={classes.button}
                         onClick={startLogOut}
                       >
                         🚪 Logout
                       </Button>
                     </Grid>
-                    <Grid item m style={{ paddingleft: '2px' }}>
-                      <Link to='/profile'>
-                        <Avatar alt='Remy Sharp' src='' />
+                    <Grid item m style={{ paddingleft: "2px" }}>
+                      <Link to="/profile">
+                        <Avatar alt="Remy Sharp" src="" />
                       </Link>
                     </Grid>
                   </Grid>

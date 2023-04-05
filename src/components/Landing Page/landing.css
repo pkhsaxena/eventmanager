@@ -12,7 +12,8 @@
 .main {
   margin: 3em 3em 0 3em;
 }
-.main > .logo {
+
+.main>.logo {
   height: 45px;
   max-width: 100%;
 }
@@ -30,11 +31,11 @@ button {
   margin-top: 1em;
   padding: 16px 0;
   font-size: 20px;
-  background-color: white;
+  background-color: rgb(252, 141, 61);;
   border-radius: 50px;
   border: none;
   outline: none;
-  color: rgb(77, 9, 6);
+  color: rgb(255, 255, 255);
   box-shadow: 0 5px 10px 10px rgba(0, 0, 0, 0.123);
   text-decoration: none;
   text-align: center;
@@ -42,8 +43,9 @@ button {
   /* width: 39%; */
   width: 100%;
 }
+
 button:hover {
-  background-color: #9b7102;
+  background-color: rgb(255,123,31);
   color: white;
 }
 
@@ -51,16 +53,23 @@ button:hover {
   font-size: 17px;
   color: #eeeeee;
 }
+
 .article_content {
   display: flex;
   flex: 50%;
   flex-direction: column;
   margin-left: 3em;
 }
+
 .landing {
-  background-color: var(--violet);
-  background-image: url("./illustration.png");
-  background-repeat: no-repeat;
+  /* background-color: #1e1e1e; */
+  /* background-image: url("./uf.jpg"); */
+  /* background-image: linear-gradient(bottom right, red, yellow); */
+  /* background-repeat: no-repeat; */
+  /* background: rgb(2,0,36); */
+  background: rgba(0, 0, 0, 0.5);
+  background: linear-gradient(90deg, rgba(255,123,31,1) 0%, rgba(0,144,255,1) 100%);
+  /* // reduce background transparency */
   background-size: 100% 100%;
   height: 100vh;
   min-height: 100vh;
@@ -69,6 +78,7 @@ button:hover {
   line-height: 1.5;
   font-family: "Poppins", sans-serif;
 }
+
 a:hover {
   color: #9b7102;
 }
@@ -77,12 +87,15 @@ a:hover {
   main {
     margin: 2em 3em 0 3em;
   }
+
   article {
     margin-top: 1.2em;
   }
+
   .article_content {
     flex: 63%;
   }
+
   content h1 {
     font-size: 32px;
   }
@@ -93,9 +106,11 @@ a:hover {
     background-image: url("./bg-mobile.png");
     background-size: cover;
   }
+
   main {
     margin: 3em 3em 0 3em;
   }
+
   .logo {
     height: auto;
   }
@@ -106,6 +121,7 @@ a:hover {
     flex-flow: row wrap;
     justify-content: space-around;
   }
+
   content h1 {
     font-size: 50px;
     text-align: center;
@@ -116,6 +132,7 @@ a:hover {
     font-size: 24px;
     line-height: 2;
   }
+
   .article_content {
     margin-left: 0;
     margin-top: 4em;
@@ -133,15 +150,19 @@ a:hover {
   main {
     margin: 2em 2em 0 2em;
   }
+
   .logo {
     height: 36px;
   }
+
   article {
     margin-top: 2em;
   }
+
   .article_content {
     margin-top: 2em;
   }
+
   content h1 {
     font-size: 26px;
   }

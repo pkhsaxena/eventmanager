@@ -1,5 +1,5 @@
-import React, { useState, useEffect, useContext } from 'react';
-import { useHistory } from 'react-router-dom';
+import React, { useState, useEffect, useContext } from "react";
+import { useHistory } from "react-router-dom";
 import {
   makeStyles,
   Modal,
@@ -8,24 +8,24 @@ import {
   Typography,
   Grid,
   Divider,
-} from '@material-ui/core';
-import './landing.css';
-import { UserContext } from '../providers/UserProvider';
-import { firebase, googleAuthProvider, auth } from '../../firebase';
+} from "@material-ui/core";
+import "./landing.css";
+import { UserContext } from "../providers/UserProvider";
+import { firebase, googleAuthProvider, auth } from "../../firebase";
 
 const useStyles = makeStyles(() => ({
   modal: {
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
   },
   paper: {
-    backgroundColor: '#fff',
-    boxShadow: '1em',
-    padding: '1em',
-    color: 'black',
-    border: '1px solid #f9f9f9',
-    borderRadius: '4px',
+    backgroundColor: "#fff",
+    boxShadow: "1em",
+    padding: "1em",
+    color: "black",
+    border: "1px solid #f9f9f9",
+    borderRadius: "4px",
   },
 }));
 const Landing = (props) => {
@@ -38,7 +38,7 @@ const Landing = (props) => {
     auth
       .signInWithPopup(googleAuthProvider)
       .then((res) => {
-        history.push('/events');
+        history.push("/events");
       })
       .catch((error) => {
         alert(error.message);
@@ -50,16 +50,16 @@ const Landing = (props) => {
   };
   useEffect(() => {
     if (user) {
-      history.push('/events');
+      history.push("/events");
       // setRedirect('/events');
     }
   }, [history, user]);
   return (
-    <div class='landing' style={{ overflowY: 'hidden' }}>
-      <main class='main'>
+    <div class="landing" style={{ overflowY: "hidden" }}>
+      <main class="main">
         <Modal
-          aria-labelledby='transition-modal-title'
-          aria-describedby='transition-modal-description'
+          aria-labelledby="transition-modal-title"
+          aria-describedby="transition-modal-description"
           className={classes.modal}
           open={open}
           onClose={toggleOpen}
@@ -71,23 +71,26 @@ const Landing = (props) => {
         >
           <Fade in={open}>
             <div className={classes.paper}>
-              <Grid container direction='row'>
-                <Grid container direction='column' spacing={2}>
+              <Grid container direction="row">
+                <Grid container direction="column" spacing={2}>
                   <Grid item>
-                    <Typography variant='h4'>Register / Login</Typography>
+                    <Typography variant="h4">Register / Login</Typography>
                   </Grid>
                   <Grid item>
-                    <Divider variant='middle' style={{ width: 'inherit' }} />
+                    <Divider variant="middle" style={{ width: "inherit" }} />
                   </Grid>
                 </Grid>
-                <Grid container direction='column' spacing={1}>
-                  <button onClick={startLogin}>Login </button>
+                <Grid container direction="column" spacing={1}>
+                  <button onClick={startLogin}>Logmain </button>
                 </Grid>
               </Grid>
             </div>
           </Fade>
         </Modal>
-        <svg
+        <Typography variant="h1" class="main__title">
+          EventHub
+        </Typography>
+        {/* <svg
           width='251'
           height='22'
           viewBox='0 0 251 22'
@@ -100,23 +103,23 @@ const Landing = (props) => {
             fill='#D2B12B'
             fill-opacity='0.87'
           />
-        </svg>
+        </svg> */}
 
-        <article class='article'>
+        <article class="article">
           <img
-            class='article_img'
-            src='https://alcs-huddle.netlify.app/images/illustration-mockups.svg'
-            alt=''
+            class="article_img"
+            src="https://alcs-huddle.netlify.app/images/illustration-mockups.svg"
+            alt=""
           />
 
-          <content class='article_content'>
+          <content class="article_content">
             {/* <h1 className="article_content_h1">Start organizing you events with us!</h1> */}
-            <Typography variant='h2' style={{ fontWeight: '400' }}>
-              Start organizing your events with us!
+            <Typography variant="h2" style={{ fontWeight: "400" }}>
+             Get Connected
             </Typography>
-            <Typography variant='h4' style={{ fontWeight: '50' }}>
-              MUJ Event manager helps you find the events that are the best for
-              you
+            <Typography variant="h4" style={{ fontWeight: "50" }}>
+              EventHub is a platform for students to organize events and find
+              events that are happening on campus. 
             </Typography>
             <button onClick={startLogin}>Register</button>
           </content>

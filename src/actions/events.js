@@ -1,15 +1,15 @@
-import recat from 'react';
-import database from '../firebase';
-import { db } from '../firebase';
-import events from '../Selectors/events';
+import recat from "react";
+import database from "../firebase";
+import { db } from "../firebase";
+import events from "../Selectors/events";
 // import {Dispatch} from 'redux';
-import eventReducer from '../Reducers/events';
+import eventReducer from "../Reducers/events";
 // import {useReducer}
 // import
 
 //ADD EVENT
 export const addEvent = (event) => ({
-  type: 'ADD_EVENT',
+  type: "ADD_EVENT",
   event,
 });
 export const addEventToStore =
@@ -33,23 +33,24 @@ export const startAddEvent =
   (dispatch, getState) => {
     try {
       const {
-        title = '',
-        description = '',
+        title = "",
+        description = "",
         amount = 0,
-        eventStartDate = '',
-        eventEndDate = '',
-        eventStartTime = '',
-        eventEndTime = '',
-        type = '',
-        venue = '',
-        poster = '',
+        eventStartDate = "",
+        eventEndDate = "",
+        eventStartTime = "",
+        eventEndTime = "",
+        type = "",
+        venue = "",
+        poster = "",
+        location = "Staduim Road, Gaineville, FL 32611",
         sponsorToggle = false,
-        sponsorName = '',
+        sponsorName = "",
         prizeMoney = 0,
-        FCPermission = false,
+        FCPermission = true,
         FCRejected = false,
         DSWRejected = false,
-        DSWPermission = false,
+        DSWPermission = true,
       } = eventData;
       // const event = {name, description,fees,eventDate,venue,eventEndDate,prizeMoney,FCPermission,DSWPermission};
       const event = {
@@ -64,6 +65,7 @@ export const startAddEvent =
         type,
         poster,
         sponsorToggle,
+        location,
         sponsorName,
         prizeMoney,
         FCPermission,
@@ -85,7 +87,7 @@ export const startAddEvent =
 
 // EDIT_event
 export const editevent = (title, updates) => ({
-  type: 'EDIT_EVENT',
+  type: "EDIT_EVENT",
   title,
   updates,
 });
@@ -103,7 +105,7 @@ export const startEditevent = (id, updates, title) => {
 
 // SET_EVENTS
 export const setevents = (events) => ({
-  type: 'SET_EVENTS',
+  type: "SET_EVENTS",
   events,
 });
 
@@ -112,7 +114,7 @@ export const startSetevents = () => {
     const uid = getState().auth.uid;
     return database
       .ref(`users/${uid}/events`)
-      .once('value')
+      .once("value")
       .then((snapshot) => {
         const events = [];
 
