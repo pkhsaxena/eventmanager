@@ -21,7 +21,7 @@ import Selectevent from '../Selectors/events';
 import { useDispatch } from 'react-redux';
 import { addEventToStore } from '../actions/events';
 import { db } from '../firebase';
-import ChatBot from '../components/Chatbot/test';
+// import ChatBot from '../components/Chatbot/test';
 export const history = createHistory();
 const AppRouter = () => {
   const dispatch = useDispatch();
