@@ -55,7 +55,7 @@ const AppRouter = () => {
           <Switch>
             <Route path='/' component={Landing} exact={true} />
             <PrivateRoute path='/home' component={Dashboard} />
-            <PrivateRoute path='/test' component={ChatBot} />
+            {/* <PrivateRoute path='/test' component={ChatBot} /> */}
             <PrivateRoute path='/events' component={Events} />
             <PrivateRoute path='/upcoming' component={UpcomingEvents} />
             <PrivateRoute path='/createevent' component={CreateEventForm} />

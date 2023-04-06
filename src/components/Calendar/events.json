@@ -13,7 +13,7 @@
       },
       {
         "id": 2,
-        "when": "2023-03-22T20:00:00",
+        "when": "2023-04-22T20:00:00",
         "where": "Barclays Center, Brooklyn",
         "what": "Jay-Z Concert",
         "tags": ["music", "concert"],
@@ -24,7 +24,7 @@
       },
       {
         "id": 3,
-        "when": "2023-03-29T10:00:00",
+        "when": "2023-04-29T10:00:00",
         "where": "Central Park Zoo, New York City",
         "what": "Penguin Feeding",
         "tags": ["animals", "family"],
@@ -35,7 +35,7 @@
       },
       {
         "id": 4,
-        "when": "2023-03-06T13:00:00",
+        "when": "2023-04-06T13:00:00",
         "where": "Madison Square Garden, New York City",
         "what": "New York Knicks vs. Brooklyn Nets",
         "tags": ["sports", "basketball"],
@@ -46,7 +46,7 @@
       },
       {
         "id": 5,
-        "when": "2023-03-13T09:00:00",
+        "when": "2023-04-13T09:00:00",
         "where": "Central Park, New York City",
         "what": "Birdwatching Tour",
         "tags": ["nature", "outdoor"],
@@ -57,7 +57,7 @@
       },
       {
         "id": 6,
-        "when": "2023-03-20T15:00:00",
+        "when": "2023-04-20T15:00:00",
         "where": "Brooklyn Academy of Music, Brooklyn",
         "what": "Dance Performance",
         "tags": ["dance", "performance"],

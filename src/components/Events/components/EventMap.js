@@ -10,8 +10,8 @@ mapboxgl.accessToken =
 const Map = () => {
   const mapContainer = useRef(null);
   const map = useRef(null);
-  const [lng, setLng] = useState(89.86);
-  const [lat, setLat] = useState(26.96);
+  const [lng, setLng] = useState(-82.341998632);
+  const [lat, setLat] = useState(29.640997436);
   const [zoom, setZoom] = useState(15);
   //   const [address, setAddress] = useState(eventAddress);
 
@@ -37,7 +37,7 @@ const Map = () => {
 
   return (
     <div>
-      <div ref={mapContainer} style={{ height: "400px"}} />
+      <div ref={mapContainer} style={{ height: "400px" }} />
     </div>
   );
 };
