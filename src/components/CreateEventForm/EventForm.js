@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
-import Navbar from '../navbar/Navbar';
-import moment from 'moment';
-import { useDispatch } from 'react-redux';
-import 'react-dates/initialize';
-import 'react-dates/lib/css/_datepicker.css';
-import { useHistory } from 'react-router-dom';
+import React, { useState } from "react";
+import Navbar from "../navbar/Navbar";
+import moment from "moment";
+import { useDispatch } from "react-redux";
+import "react-dates/initialize";
+import "react-dates/lib/css/_datepicker.css";
+import { useHistory } from "react-router-dom";
 import {
   Paper,
   Button,
@@ -20,28 +20,28 @@ import {
   Select,
   MenuItem,
   FormControlLabel,
-} from '@material-ui/core';
-import './form.css';
-import { startAddEvent } from '../../actions/events';
+} from "@material-ui/core";
+import "./form.css";
+import { startAddEvent } from "../../actions/events";
 
 const useStyles = makeStyles(() => ({
   root: {},
   formPaper: {
-    margin: '8px 16px',
-    padding: '8px',
+    margin: "8px 16px",
+    padding: "8px",
   },
   formContainer: {
-    padding: '8px',
+    padding: "8px",
   },
   formFields: {
-    padding: '0px 64px',
-    margin: '0px 32px',
+    padding: "0px 64px",
+    margin: "0px 32px",
   },
   formControl: {
-    marginTop: '8px',
+    marginTop: "8px",
   },
   fields: {
-    marginTop: '8px',
+    marginTop: "8px",
   },
   fieldHeaders: {
     fontWeight: 500,
@@ -49,20 +49,20 @@ const useStyles = makeStyles(() => ({
 }));
 const CreateEventForm = () => {
   const classes = useStyles();
-  const [title, setTitle] = useState('');
-  const [description, setdescription] = useState('');
+  const [title, setTitle] = useState("");
+  const [description, setdescription] = useState("");
   const [amount, setamount] = useState(null);
-  const [venue, setvenue] = useState('Old Audi');
+  const [venue, setvenue] = useState("Old Audi");
   const [eventStartDate, seteventStartDate] = useState(moment());
   const [eventEndDate, seteventEndDate] = useState(moment());
-  const [eventStartTime, setStartTime] = useState('00:00');
-  const [eventEndTime, setEndTime] = useState('23:59');
-  const [type, settype] = useState('Technical');
+  const [eventStartTime, setStartTime] = useState("00:00");
+  const [eventEndTime, setEndTime] = useState("23:59");
+  const [type, settype] = useState("Technical");
   const [poster, setposter] = useState(
-    'https://res.cloudinary.com/dashed/image/upload/v1611051427/acm/klgjkuqdehb2g4buvprx.png'
+    "https://res.cloudinary.com/dashed/image/upload/v1611051427/acm/klgjkuqdehb2g4buvprx.png"
   );
   const [sponsorToggle, setsponsorToggle] = useState(false);
-  const [sponsorName, setsponsorName] = useState('');
+  const [sponsorName, setsponsorName] = useState("");
   const [feeToggle, setFeeToggle] = useState(false);
   const [sponsorshipamount, setsponsorshipAmount] = useState(null);
   const dispatch = useDispatch();
@@ -85,7 +85,7 @@ const CreateEventForm = () => {
       sponsorName,
     };
     dispatch(startAddEvent(formData));
-    history.push('/events');
+    history.push("/events");
   };
   const onTitleChange = (e) => {
     setTitle(e.target.value);
@@ -113,14 +113,14 @@ const CreateEventForm = () => {
     settype(type);
   };
   const handleonDateChange = (e) => {
-    if (e.target.id === 'end-date') {
+    if (e.target.id === "end-date") {
       seteventEndDate(e.target.value);
     } else {
       seteventStartDate(e.target.value);
     }
   };
   const handelsponsorToggle = () => {
-    setsponsorName('');
+    setsponsorName("");
     setsponsorshipAmount(0);
     setsponsorToggle(!sponsorToggle);
   };
@@ -128,7 +128,7 @@ const CreateEventForm = () => {
     setFeeToggle(!feeToggle);
   };
   const handleTimeChange = (e) => {
-    if (e.target.id === 'end-time') {
+    if (e.target.id === "end-time") {
       setStartTime(e.target.value);
     } else {
       setEndTime(e.target.value);
@@ -155,10 +155,10 @@ const CreateEventForm = () => {
   return (
     <div>
       <Navbar />
-      <Paper className={classes.formPaper} elevation='10'>
+      <Paper className={classes.formPaper} elevation="10">
         <Typography
-          variant='h4'
-          className='heading'
+          variant="h4"
+          className="heading"
           style={{ fontWeight: 500 }}
         >
           Create Event
@@ -166,24 +166,24 @@ const CreateEventForm = () => {
         <Grid
           container
           spacing={2}
-          direction='row'
-          justify='space-evenly'
+          direction="row"
+          justify="space-evenly"
           className={classes.formContainer}
         >
           <Grid item xs>
-            <Grid container direction='column' className={classes.formFields}>
+            <Grid container direction="column" className={classes.formFields}>
               <Grid item xs>
                 <FormControl
                   fullWidth
-                  variant='outlined'
+                  variant="outlined"
                   className={classes.formControl}
                 >
-                  <Typography variant='h5' className={classes.fieldHeaders}>
+                  <Typography variant="h5" className={classes.fieldHeaders}>
                     Event Name
                   </Typography>
                   <OutlinedInput
-                    id='event-name'
-                    placeholder='Event title'
+                    id="event-name"
+                    placeholder="Event title"
                     value={title}
                     onChange={onTitleChange}
                     className={classes.fields}
@@ -191,15 +191,15 @@ const CreateEventForm = () => {
                 </FormControl>
                 <FormControl
                   fullWidth
-                  variant='outlined'
+                  variant="outlined"
                   className={classes.formControl}
                 >
-                  <Typography variant='h5' className={classes.fieldHeaders}>
+                  <Typography variant="h5" className={classes.fieldHeaders}>
                     Event Description
                   </Typography>
                   <OutlinedInput
-                    id='event-description'
-                    placeholder='Description'
+                    id="event-description"
+                    placeholder="Description"
                     value={description}
                     multiline
                     onChange={onDescriptionChange}
@@ -208,10 +208,10 @@ const CreateEventForm = () => {
                 </FormControl>
                 <FormControl
                   fullWidth
-                  variant='outlined'
+                  variant="outlined"
                   className={classes.formControl}
                 >
-                  <Typography variant='h6' className={classes.fieldHeaders}>
+                  <Typography variant="h6" className={classes.fieldHeaders}>
                     Check the box if your event is paid
                   </Typography>
                   <FormControlLabel
@@ -221,22 +221,22 @@ const CreateEventForm = () => {
                         onChange={handelFeeToggle}
                       />
                     }
-                    label='paid event'
+                    label="paid event"
                   />
                 </FormControl>
                 {feeToggle && (
                   <>
                     <FormControl
                       fullWidth
-                      variant='outlined'
+                      variant="outlined"
                       className={classes.formControl}
                     >
-                      <Typography variant='h5' className={classes.fieldHeaders}>
+                      <Typography variant="h5" className={classes.fieldHeaders}>
                         Amount
                       </Typography>
                       <OutlinedInput
-                        id='Event-amount'
-                        placeholder='Registeration Fees'
+                        id="Event-amount"
+                        placeholder="Registeration Fees"
                         value={amount}
                         onChange={onAmountChange}
                         className={classes.fields}
@@ -246,61 +246,61 @@ const CreateEventForm = () => {
                 )}
                 <FormControl
                   fullWidth
-                  variant='outlined'
+                  variant="outlined"
                   className={classes.formControl}
                 >
-                  <Typography variant='h5' className={classes.fieldHeaders}>
+                  <Typography variant="h5" className={classes.fieldHeaders}>
                     Type
                   </Typography>
-                  <RadioGroup row aria-label='type' name='type'>
+                  <RadioGroup row aria-label="type" name="type">
                     <FormControlLabel
-                      value='Technical'
+                      value="Technical"
                       control={<Radio />}
-                      label='Technical'
+                      label="Technical"
                       onChange={onTypeChange}
                     />
                     <FormControlLabel
-                      value='Cultural'
+                      value="Cultural"
                       control={<Radio />}
-                      label='Cultural'
+                      label="Cultural"
                       onChange={onTypeChange}
                     />
                     <FormControlLabel
-                      value='Department'
+                      value="Department"
                       control={<Radio />}
-                      label='Department'
+                      label="Department"
                       onChange={onTypeChange}
                     />
                     <FormControlLabel
-                      value='Curricular'
+                      value="Curricular"
                       control={<Radio />}
-                      label='Curricular'
+                      label="Curricular"
                       onChange={onTypeChange}
                     />
                     <FormControlLabel
-                      value='Social'
+                      value="Social"
                       control={<Radio />}
-                      label='Social'
+                      label="Social"
                       onChange={onTypeChange}
                     />
                   </RadioGroup>
                 </FormControl>
                 <FormControl
                   fullWidth
-                  variant='outlined'
+                  variant="outlined"
                   className={classes.formControl}
                 >
-                  <Typography variant='h5' className={classes.fieldHeaders}>
+                  <Typography variant="h5" className={classes.fieldHeaders}>
                     Timings
                   </Typography>
-                  <Grid container direction='row'>
+                  <Grid container direction="row">
                     <Grid item xs>
                       <TextField
                         className={classes.fields}
-                        id='start-date'
-                        label='Start Date'
-                        type='date'
-                        defaultValue='01-01-2020'
+                        id="start-date"
+                        label="Start Date"
+                        type="date"
+                        defaultValue="01-01-2020"
                         InputLabelProps={{ shrink: true }}
                         onChange={handleonDateChange}
                       />
@@ -308,23 +308,23 @@ const CreateEventForm = () => {
                     <Grid item xs>
                       <TextField
                         className={classes.fields}
-                        id='end-date'
-                        label='End Date'
-                        type='date'
-                        defaultValue='30-01-2020'
+                        id="end-date"
+                        label="End Date"
+                        type="date"
+                        defaultValue="30-01-2020"
                         InputLabelProps={{ shrink: true }}
                         onChange={handleonDateChange}
                       />
                     </Grid>
                   </Grid>
-                  <Grid container direction='row' style={{ paddingTop: '8px' }}>
+                  <Grid container direction="row" style={{ paddingTop: "8px" }}>
                     <Grid item xs>
                       <TextField
                         className={classes.fields}
-                        id='start-time'
-                        label='Start time'
-                        type='time'
-                        defaultValue='00:00'
+                        id="start-time"
+                        label="Start time"
+                        type="time"
+                        defaultValue="00:00"
                         InputLabelProps={{ shrink: true }}
                         onChange={handleTimeChange}
                       />
@@ -332,10 +332,10 @@ const CreateEventForm = () => {
                     <Grid item xs>
                       <TextField
                         className={classes.fields}
-                        id='end-time'
-                        label='End time'
-                        type='time'
-                        defaultValue='23:59'
+                        id="end-time"
+                        label="End time"
+                        type="time"
+                        defaultValue="23:59"
                         InputLabelProps={{ shrink: true }}
                         onChange={handleTimeChange}
                       />
@@ -345,31 +345,31 @@ const CreateEventForm = () => {
 
                 <FormControl
                   fullWidth
-                  variant='outlined'
+                  variant="outlined"
                   className={classes.formControl}
                 >
-                  <Typography variant='h5' className={classes.fieldHeaders}>
+                  <Typography variant="h5" className={classes.fieldHeaders}>
                     Event Venue
                   </Typography>
                   <Select
-                    labelId='event-venue'
-                    id='event-venue'
+                    labelId="event-venue"
+                    id="event-venue"
                     value={venue}
                     onChange={onVenueChange}
                   >
-                    <MenuItem value='Old Audi'>Old Auditorium</MenuItem>
-                    <MenuItem value='Sharda Pai'>Sharda Pai</MenuItem>
-                    <MenuItem value='TMA Pai'>TMA Pai</MenuItem>
-                    <MenuItem value='1AB hall'>1AB hall</MenuItem>
+                    <MenuItem value="Old Audi">Reitz Union</MenuItem>
+                    <MenuItem value="Sharda Pai">Turlington</MenuItem>
+                    <MenuItem value="TMA Pai">Marston Library</MenuItem>
+                    <MenuItem value="1AB hall">Plaza of America</MenuItem>
                   </Select>
                 </FormControl>
 
                 <FormControl
                   fullWidth
-                  variant='outlined'
+                  variant="outlined"
                   className={classes.formControl}
                 >
-                  <Typography variant='h6' className={classes.fieldHeaders}>
+                  <Typography variant="h6" className={classes.fieldHeaders}>
                     Sponsorship
                   </Typography>
                   <FormControlLabel
@@ -379,22 +379,22 @@ const CreateEventForm = () => {
                         onChange={handelsponsorToggle}
                       />
                     }
-                    label='Sponsored'
+                    label="Sponsored"
                   />
                 </FormControl>
                 {sponsorToggle && (
                   <>
                     <FormControl
                       fullWidth
-                      variant='outlined'
+                      variant="outlined"
                       className={classes.formControl}
                     >
-                      <Typography variant='h5' className={classes.fieldHeaders}>
+                      <Typography variant="h5" className={classes.fieldHeaders}>
                         Sponsor's name
                       </Typography>
                       <OutlinedInput
-                        id='sponsor-name'
-                        placeholder='Name'
+                        id="sponsor-name"
+                        placeholder="Name"
                         value={sponsorName}
                         onChange={(e) => {
                           setsponsorName(e.target.value);
@@ -404,15 +404,15 @@ const CreateEventForm = () => {
                     </FormControl>
                     <FormControl
                       fullWidth
-                      variant='outlined'
+                      variant="outlined"
                       className={classes.formControl}
                     >
-                      <Typography variant='h5' className={classes.fieldHeaders}>
+                      <Typography variant="h5" className={classes.fieldHeaders}>
                         Amount
                       </Typography>
                       <OutlinedInput
-                        id='sponsor-amount'
-                        placeholder='Sponsorship amount'
+                        id="sponsor-amount"
+                        placeholder="Sponsorship amount"
                         value={sponsorshipamount}
                         onChange={onSponsorshipAmountChange}
                         className={classes.fields}
@@ -424,23 +424,23 @@ const CreateEventForm = () => {
             </Grid>
           </Grid>
           <Grid item xs>
-            <Grid container direction='column' alignItems='center' spacing={2}>
-              <Grid item style={{ padding: '16px 0px' }}>
-                <Button type='file' component='label' variant='contained'>
+            <Grid container direction="column" alignItems="center" spacing={2}>
+              <Grid item style={{ padding: "16px 0px" }}>
+                <Button type="file" component="label" variant="contained">
                   <Grid>
-                    <Typography display='block'>Upload image</Typography>
+                    <Typography display="block">Upload image</Typography>
                     <Typography
-                      style={{ textAlign: 'center' }}
-                      display='block'
-                      variant='caption'
+                      style={{ textAlign: "center" }}
+                      display="block"
+                      variant="caption"
                     >
                       760 x 1080
                     </Typography>
                   </Grid>
                   <input
                     onChange={(e) => handleFileRead(e)}
-                    type='file'
-                    name='poster'
+                    type="file"
+                    name="poster"
                     // style={{ display: 'none' }}
                     hidden
                   />
@@ -448,16 +448,16 @@ const CreateEventForm = () => {
               </Grid>
             </Grid>
             <Grid item xs>
-              <Grid container direction='row'>
+              <Grid container direction="row">
                 <Grid item xs />
                 <Grid item xs>
                   <img
                     src={poster}
-                    alt='poster'
+                    alt="poster"
                     style={{
-                      backgroundSize: 'contain',
-                      backgroundRepeat: 'no-repeat',
-                      height: '100vh',
+                      backgroundSize: "contain",
+                      backgroundRepeat: "no-repeat",
+                      height: "100vh",
                     }}
                   />
                 </Grid>
@@ -466,14 +466,17 @@ const CreateEventForm = () => {
             </Grid>
           </Grid>
         </Grid>
-        <Grid container style={{ padding: '16px' }} spacing={2}>
+        <Grid container style={{ padding: "16px" }} spacing={2}>
           <Grid item xs>
             <Button
               onClick={handleSubmit}
+              variant="contained"
+              color="primary"
+              size="medium"
               style={{
-                padding: '16px 0px',
-                alignSelf: 'center',
-                width: '100%',
+                padding: "16px 0px",
+                alignSelf: "center",
+                width: "100%",
               }}
             >
               Create Event
